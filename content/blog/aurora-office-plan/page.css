@@ -1,0 +1,12 @@
+:root {
+    --reading-width: 36rem;
+}
+pre {
+    display: inline-block;
+    padding: 3rem;
+    background-color: beige;
+    color: rgba(0 0 0 / 0.8);
+}
+main { padding-bottom: 4rem; }
+
+.links-nextprev { display: none; }

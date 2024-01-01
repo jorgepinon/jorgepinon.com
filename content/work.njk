@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Work
+  order: 2
+---
+<h1>Samples of Work</h1>
+
+<p>This site includes old work, when I was a print designer and a web freelancer. My current role is Director of Design, in which I work with cross-functional teams to design and build websites and web apps. </p>
+
+{% set items = collections.work %}
+{% include "thumbnails.njk" %}

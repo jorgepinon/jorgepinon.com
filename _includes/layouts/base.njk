@@ -10,30 +10,20 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+		<meta name="generator" content="{{ eleventy.generator }}">
 
-		{#-
-		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. You can add to them using `{% css %}`
-		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
-		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
+		<link rel="stylesheet" href="/css/styles.css">
+		{% if page_css %}
+		<link rel="stylesheet" href="{{ "page.css" if page_css == true else page_css }}">
+		{% endif %}
 
-		{#- Add an arbitrary string to the bundle #}
-		{%- css %}* { box-sizing: border-box; }{% endcss %}
-		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		{#- Or add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
+		{% if image %}
+		<meta property="og:image" content="{{ image | absolutize(page.url) }}" />
+		<meta name="twitter:image" content="{{ image | absolutize(page.url) }}" />
+		{% endif %}
 
-		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
-		<style>{% getBundle "css" %}</style>
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 	</head>
-	<body>
+	<body class="{{ pageClass }}">
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
@@ -43,9 +33,8 @@
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
+					<li class="nav-item"><a href="/work/" {% if page.url == '/work/' %} aria-current="page"{% endif %}>Work</a></li>
+					<li class="nav-item"><a href="/blog/" {% if page.url == '/blog/' %} aria-current="page"{% endif %}>Notes</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -54,7 +43,15 @@
 			{{ content | safe }}
 		</main>
 
-		<footer></footer>
+		<footer role="contentinfo">
+			<nav>
+				<a href="/">Home</a>
+				<a href="/about/">About</a>
+				<a href="@jorge@mastodon.design">Mastodon</a>
+				<a href="https://jsfiddle.net/user/jorgeluis/fiddles/">jsfiddles</a>
+				<a href="https://github.com/jorgepinon">github</a>
+			</nav>
+		</footer>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>

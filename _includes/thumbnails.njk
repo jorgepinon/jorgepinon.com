@@ -1,0 +1,15 @@
+<ul class="worklist">
+{% for item in items %}
+	<li class="worklist-item">
+		<figure class="card">
+			<a href="{{ item.url }}" title="read more">
+				<img class="card-image" src="{{ item.fileSlug }}/{{ item.data.thumbnail }}" alt="" data-large-image="{{ item.fileSlug }}/{{ item.data.largeImage }}">
+			</a>
+
+			<figcaption>
+				<a href="{{ item.url }}">{{ item.data.title }}</a>
+			</figcaption>
+		</figure>
+	</li>
+{% endfor %}
+</ul>
