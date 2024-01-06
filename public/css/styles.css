@@ -186,6 +186,7 @@ img {
 }
 .breakout figure img {
 	max-width: 90vw;
+	margin: 0 auto;
 }
 figcaption {
 	color: var(--color-gray-50);
