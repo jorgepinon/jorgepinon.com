@@ -1,0 +1,17 @@
+# Redirects from what the browser requests to what we serve
+/about.html                /about
+/work/amd-rewards-site.html  /work/amd-rewards-site/
+/work/avaya-rewards-site.html  /work/avaya-rewards/
+/work/choose-digital-apps.html  /work/cd-apps/
+/work/cd-booth-graphics.html  /work/cd-booth/
+/work/choose-digital-website.html  /work/cd-site/
+/work/grassroots-events.html  /work/grassroots-events/
+/work/grizzlies-gametime.html  /work/grizzlies-gametime/
+/work/hp-palm-rewards.html  /work/hp-palm-rewards/
+/work/humane-society-of-memphis.html  /work/humane-society/
+/work/menuapp-settings-form-ui.html  /work/menuapp-settings/
+/work/own-your-music-logo.html  /work/own-your-music/
+/work/sentree.com-site.html  /work/sentree-site/
+/work/viggle-store.html /work/viggle-store/
+/work/watsco.com-site.html    /work/watsco-site/
+  
