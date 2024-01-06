@@ -4,7 +4,7 @@ pageClass: about
 ---
 # Hóla
 
-I’m a web designer and front-end developer living in Miami Beach with 14+ years experience working on the web. What I like doing best is working on user-centered design ideas from sketch to wireframes, to prototypes, to production code. I’ve been using Illustrator and Photoshop way too long, and I’m comfortable coding client-side HTML, CSS, and JS at all hours of the day and night in a few different environments, like NodeJS, Java, PHP/Wordpress, and Rails.
+I’m a web designer and front-end developer living in Miami Beach with 20+ years experience working on the web. What I like doing best is working on user-centered design ideas from concept to sketch, wireframes to prototypes, to production code. 
 
 I’m an avid believer in solving design problems through iteration until a thing is simple and great.
 
